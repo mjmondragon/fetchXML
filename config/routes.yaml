@@ -1,0 +1,8 @@
+index:
+    path: /
+    controller: App\Controller\FeedController::index
+
+download:
+    path: /export/json
+    controller: App\Controller\FeedController::download
+

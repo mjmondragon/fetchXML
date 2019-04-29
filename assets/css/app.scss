@@ -1,0 +1,73 @@
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$size_3: 15px;
+$brand-primary:#32b496;
+$text-color: #222;
+body {
+    background-color:#fafafa;
+    font-family: 'Arial, Arial Narrow';
+}
+
+.p-2{
+    padding: 10px;
+}
+.pt-3{
+    padding-top: $size_3;
+}
+.pb-3{
+    padding-bottom: $size_3;
+}
+.mt-12{
+    margin-top: 60px;
+}
+.mb-3{
+    margin-bottom: $size_3;
+}
+th{
+    .fa-sort-up, .fa-sort-down{
+        display: none;
+    }
+    &.sorted{
+        .fa-sort{
+            display: none;
+        }
+        &.asc{
+            .fa-sort-up{
+                display: inline;
+            }
+        }
+        &.desc{
+            .fa-sort-down{
+                display: inline;
+            }
+        }
+    }
+}
+.navbar{
+    box-shadow: 1px 1px 1px 2px rgba($color: #000000, $alpha: 0.03)
+}
+.table{
+    width: 100%; 
+    background-color: #fff;
+    box-shadow: 1px 0px 1px 2px rgba($color: #000000, $alpha: 0.03);
+    border-spacing: 0;
+    thead{
+        tr{
+            background-color: #eee;
+        }
+    }
+    tr{
+        th{
+            text-align: left;
+            color: #5b5b5b;
+        }
+        th, td{
+            padding: 8px 12px;
+        }
+       
+    }
+    tr:nth-child(2n){
+        background-color: #fafafa;
+    }
+}
