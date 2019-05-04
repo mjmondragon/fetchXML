@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="App\Repository\ListingRepository")
  * 
  */
-class Listing implements \JsonSerializable
+class Listing extends Model implements \JsonSerializable
 {
     /**
      * @ORM\Id()
@@ -62,8 +62,9 @@ class Listing implements \JsonSerializable
      */
     private $address;
 
-    public function __construct()
+    public function __construct($attributes = array())
     {
+        parent::__construct($attributes);
         $this->pictures = new ArrayCollection();
     }
 

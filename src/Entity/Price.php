@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @author Mauricio J Mondragon R <mauro102189@gmail.com>
  * @ORM\Entity(repositoryClass="App\Repository\PriceRepository")
  */
-class Price
+class Price extends Model
 {
     /**
      * @ORM\Id()
@@ -55,4 +55,5 @@ class Price
 
         return $this;
     }
+
 }

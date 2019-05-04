@@ -12,6 +12,7 @@ use App\Service\ImporterXML;
 use App\Factory\CriteriaFactory;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Contracts\Cache\ItemInterface;
+use App\Service\ImporterInterface;
 
 /**
  * @author Mauricio J Mondragon <mauro102189@gmail.com>
@@ -62,5 +63,6 @@ class FeedController extends AbstractController{
         }
         return $listings;
     }
+    
 }
 ?>

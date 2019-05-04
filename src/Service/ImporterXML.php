@@ -28,9 +28,7 @@ class ImporterXML implements ImporterInterface{
         foreach($xmlContent->children() as $xmlAd){
             $xmlPrice = $xmlAd->price;
             $xmlPictures = clone $xmlAd->pictures;
-            $price = new Price();
-            $price->setAmount((int)$xmlPrice->__toString());
-            $price->setCurrency($xmlPrice->attributes()[0]);
+            $price = new Price(['amount' => (int)$xmlPrice->__toString(), 'currency' => $xmlPrice->attributes()[0]]);
             unset($xmlAd->pictures);
             unset($xmlAd->price);
             $listing = $serializer->deserialize($xmlAd->asXML(), Listing::class, 'xml', [

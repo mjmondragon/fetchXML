@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @author Mauricio J Mondragon R <mauro102189@gmail.com>
  * @ORM\Entity(repositoryClass="App\Repository\PropertyRepository")
  */
-class Property
+class Property extends Model
 {
     /**
      * @ORM\Id()
